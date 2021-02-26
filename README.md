@@ -30,7 +30,7 @@ Data is originally from the [Million songs dataset](http://millionsongdataset.co
 * Load data from S3 to staging tables on Redshift.
 * Load data from staging tables to analytics tables on Redshift.
 * Test etl.py after running create_tables.py and then run the analytic queries on the Redshift database
-* Delete your redshift cluster when finished.
+* Delete redshift cluster when finished.
 
 ##### README contents
 * Explain the purpose of the database, schema design and ETL pipe
