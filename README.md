@@ -1,7 +1,7 @@
 # ETL project
 
 ## Purpose of the database
-More ETL work from Udacity's Data Engineering Nanodegree. Ficticious firm Sparkify want to move their processes and data onto the cloud. Their data resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app. The repo is tasked with building an ETL pipeline that extracts the data from S3, stages it in Redshift, and transforms data into a set of dimensional tables.  
+More ETL work from Udacity's Data Engineering Nanodegree. A firm wants to move their processes and data onto the cloud. Their data resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app. The repo is tasked with building an ETL pipeline that extracts the data from S3, stages it in Redshift, and transforms data into a set of dimensional tables.  
 
 ## Assumption of the pipeline
 Redshift cluster has been created and IAM role and endpoint details are added to the config file, `dwh.cfg`
