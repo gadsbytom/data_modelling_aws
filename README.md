@@ -1,13 +1,10 @@
 # ETL project
 
 ## Purpose of the database
-More ETL work from Udacity's Data Engineering Nanodegree. A firm wants to move their processes and data onto the cloud. Their data resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app. The repo is tasked with building an ETL pipeline that extracts the data from S3, stages it in Redshift, and transforms data into a set of dimensional tables.  
+An ETL pipeline based on the [million songs dataset](http://millionsongdataset.com/). A dataset comprising user logs and music records resides in S3, in a directory of JSON user logs (user activity), as well as a directory with JSON song metadata. This repo is builds an ETL pipeline that extracts the data from S3, stages it in Redshift, and transforms data into a set of SQL fact and dimension tables (basically an unstructured to structured transformation).  
 
 ## Assumption of the pipeline
 Redshift cluster has been created and IAM role and endpoint details are added to the config file, `dwh.cfg`
-
-## Analytic goals
-Sparkify's analytics team will analyze the data they've been collecting on songs and user activity on their new music streaming app.
 
 ## Data
 Data is from the [million songs dataset](http://millionsongdataset.com/)
@@ -53,7 +50,7 @@ The staging schema loads events data into one event staging table, and song data
 * year INT
 
 ### Final schema. 
-The final schema follows the star schema principle. The tables are listed below:
+The final schema follows the [star schema](https://en.wikipedia.org/wiki/Star_schema) principle. The tables are listed below:
 
 ### Fact tables:
 
