@@ -4,7 +4,7 @@
 An ETL pipeline based on the [million songs dataset](http://millionsongdataset.com/). A dataset comprising user logs and music records resides in S3, in a directory of JSON user logs (user activity), as well as a directory with JSON song metadata. This repo is builds an ETL pipeline that extracts the data from S3, stages it in Redshift, and transforms data into a set of SQL fact and dimension tables (basically an unstructured to structured transformation).  
 
 ## Assumption of the pipeline
-Redshift cluster has been created and IAM role and endpoint details are added to the config file, `dwh.cfg`
+An AWS Redshift cluster has been created and IAM role and endpoint details are added to the config file, `dwh.cfg`
 
 ## Data
 Data is from the [million songs dataset](http://millionsongdataset.com/)
@@ -105,7 +105,7 @@ The final schema follows the [star schema](https://en.wikipedia.org/wiki/Star_sc
 * sql_queries - all sql code resides here and is called from the above two modules.
 
 ## How to use:
-* create a redshift cluster via AWS, note its endpoint details
+* create an AWS Redshift cluster, nothing the following details: **[endpoint, db name, db user, db password, db port]**
 * open dwh.cfg and overwrite CLUSTER>HOST, DB_NAME, DB_USER, DB_PASSWORD, and DB_PORT, with the relevant details.
 * in a terminal in `/home/workspace`, run `python etl.py`
 
