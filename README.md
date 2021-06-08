@@ -105,7 +105,7 @@ The final schema follows the [star schema](https://en.wikipedia.org/wiki/Star_sc
 * sql_queries - all sql code resides here and is called from the above two modules.
 
 ## How to use:
-* create an AWS Redshift cluster, nothing the following details: **[endpoint, db name, db user, db password, db port]**
+* create an AWS Redshift cluster, noting the following details: **[endpoint, db name, db user, db password, db port]**
 * open dwh.cfg and overwrite CLUSTER>HOST, DB_NAME, DB_USER, DB_PASSWORD, and DB_PORT, with the relevant details.
 * in a terminal in `/home/workspace`, run `python etl.py`
 
